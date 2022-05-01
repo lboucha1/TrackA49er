@@ -3,6 +3,8 @@ import HeatForm from './HeatMap.js';
 import "leaflet/dist/leaflet.css";
 import About from './about.js';
 import Home from './home.js';
+import Login from './login.js';
+import SignUp from './sign-up.js';
 import {
     BrowserRouter as Router,
     Routes,
@@ -22,6 +24,12 @@ function App() {
                 <ul>
                     <li className='logo'>
                         <Link className='logo' to='/home'>TrackA49er</Link>
+                    </li>
+					<li className='pages'>
+                        <Link className='pages' to='/login'>Login</Link>
+                    </li>
+					<li className='pages'>
+                        <Link className='pages' to='/signup'>Sign Up</Link>
                     </li>
                     <li className='pages'>
                         <Link className='pages' to='/home'>Home</Link>
@@ -45,6 +53,8 @@ function App() {
 
                 <Routes>
                     <Route exact path='/home' element={<Home />}></Route>
+					<Route exact path='/login' element={<Login />}></Route>
+					<Route exact path='/signup' element={<SignUp />}></Route>
                     <Route exact path='/HeatMap' element={<HeatForm />}></Route>
                     <Route exact path='/about' element={<About />}></Route>
                     <Route exact path='/lowactivity' element={<LowActivity />}></Route>
